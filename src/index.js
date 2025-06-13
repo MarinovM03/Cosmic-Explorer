@@ -1,9 +1,12 @@
-import express from 'express';
+import express, { urlencoded } from 'express';
 
 const app = express();
 
 // Static middleware
 app.use(express.static('src/public'));
+
+// Body parser middleware
+app.use(express.urlencoded());
 
 app.get('/', (req, res) => {
     res.send('It works');
