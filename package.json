@@ -1,0 +1,22 @@
+{
+  "name": "cosmic-explorer",
+  "version": "1.0.0",
+  "description": "Cosmic-Explorer is a full-stack app for discovering, sharing, and managing planet posts. Built with ExpressJS, MongoDB, Handlebars, and bcrypt, it features secure user auth, CRUD, likes, search, and robust validation—perfect for hands-on Node.js practice.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarinovM03/Cosmic-Explorer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/MarinovM03/Cosmic-Explorer/issues"
+  },
+  "homepage": "https://github.com/MarinovM03/Cosmic-Explorer#readme"
+}
