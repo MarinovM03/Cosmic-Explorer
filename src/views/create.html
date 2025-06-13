@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Planet</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Catalog</a></li>
+                <li><a href="#">Search</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Register</a></li>
+                <li><a href="#">Create</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="error-containers">
+            <p>Error</p>
+        </div>
+
+        <form class="planet-form">
+            <label for="name">Name of Planet:</label>
+            <input type="text" id="name" name="">
+
+            <label for="age">Age (in billion years):</label>
+            <input type="number" id="age" name="">
+
+            <label for="solarSystem">Solar System:</label>
+            <input type="text" id="solarSystem" name="">
+
+            <label for="type">Type:</label>
+            <select id="type" name="">
+                <option value="---" selected>---</option>
+                <option value="Inner">Inner</option>
+                <option value="Outer">Outer</option>
+                <option value="Dwarf">Dwarf</option>
+            </select>
+
+            <label for="moons">Moons (count):</label>
+            <input type="number" id="moons" name="">
+
+            <label for="size">Size (in km):</label>
+            <input type="number" id="size" name="">
+
+            <label for="rings">Rings:</label>
+            <select id="rings" name="">
+                <option value="---" selected>---</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="" rows="4"></textarea>
+
+            <label for="image">Image URL:</label>
+            <input type="url" id="image" name="">
+
+            <button type="submit">Add Planet</button>
+        </form>
+    </main>
+    <footer>
+        <p>© 2024 Space Explorers. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
