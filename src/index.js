@@ -1,4 +1,5 @@
-import express, { urlencoded } from 'express';
+import express from 'express';
+import handlebars from 'express-handlebars';
 
 import routes from './routes.js';
 
@@ -9,6 +10,12 @@ app.use(express.static('src/public'));
 
 // Body parser middleware
 app.use(express.urlencoded());
+
+// Config handlebars as view engine
+app.engine('hbs', handlebars.engine({ extname: 'hbs', }));
+
+// Set handlebars as default engine
+app.set('view engine', 'hbs');
 
 // Add routes
 app.use(routes);
