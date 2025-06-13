@@ -17,6 +17,9 @@ app.engine('hbs', handlebars.engine({ extname: 'hbs', }));
 // Set handlebars as default engine
 app.set('view engine', 'hbs');
 
+// Change default views directory
+app.set('views', 'src/views');
+
 // Add routes
 app.use(routes);
 
