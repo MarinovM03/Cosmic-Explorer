@@ -31,11 +31,15 @@ userController.get('/login', isGuest, (req, res) => {
 userController.post('/login', isGuest, async (req, res) => {
     const { username, password } = req.body;
 
-    const token = await userService.login(username, password);
+    try {
+        const token = await userService.login(username, password);
 
-    res.cookie(AUTH_COOKIE_NAME, token);
+        res.cookie(AUTH_COOKIE_NAME, token);
 
-    res.redirect('/');
+        res.redirect('/');
+    } catch (err) {
+        res.render('user/login', { error: getErrorMessage(err), user: { username } });
+    }
 });
 
 userController.get('/logout', isAuth, (req, res) => {
