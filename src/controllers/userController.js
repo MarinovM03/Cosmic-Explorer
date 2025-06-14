@@ -19,4 +19,12 @@ userController.get('/login', (req, res) => {
     res.render('user/login');
 });
 
+userController.post('/login', async (req, res) => {
+    const loginData = req.body;
+
+    // await userService.login(loginData);
+
+    res.render('/');
+});
+
 export default userController;
