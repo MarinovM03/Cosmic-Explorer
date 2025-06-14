@@ -1,3 +1,5 @@
+import bcrypt from 'bcrypt';
+
 import User from '../models/User.js';
 
 export default {
@@ -21,6 +23,10 @@ export default {
             throw new Error('No such user exists!');
         }
 
-        
+        const isValid = await bcrypt.compare(password, user.password);
+
+        if (!isValid) {
+            throw new Error('Invalid username or password!');
+        }
     }
 }
