@@ -16,6 +16,7 @@ export function auth(req, res, next) {
         res.locals.user = user;
         res.locals.isAuthenticated = true;
 
+        next();
     } catch (err) {
         res.clearCookie(AUTH_COOKIE_NAME);
 
