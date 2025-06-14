@@ -20,7 +20,7 @@ userController.post('/register', isGuest, async (req, res) => {
 
         res.redirect('/');
     } catch (err) {
-        res.render('user/register', { error: getErrorMessage(err) });
+        res.render('user/register', { error: getErrorMessage(err), user: userData });
     }
 });
 
