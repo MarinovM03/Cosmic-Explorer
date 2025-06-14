@@ -7,5 +7,8 @@ const routes = Router();
 
 routes.use(homeController);
 routes.use('/users', userController);
+routes.all('*url', (req, res) => {
+    res.render('404');
+});
 
 export default routes;
