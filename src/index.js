@@ -4,6 +4,7 @@ import handlebars from 'express-handlebars';
 import routes from './routes.js';
 import initDatabase from './config/dbConfig.js';
 import cookieParser from 'cookie-parser';
+import { auth } from './middlewares/authMiddleware.js';
 
 // Init express
 const app = express();
@@ -34,6 +35,9 @@ app.set('view engine', 'hbs');
 
 // Change default views directory
 app.set('views', 'src/views');
+
+// Use auth middleware
+app.use(auth);
 
 // Add routes
 app.use(routes);
