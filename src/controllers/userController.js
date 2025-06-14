@@ -10,7 +10,9 @@ userController.get('/register', (req, res) => {
 userController.post('/register', async (req, res) => {
     const userData = req.body;
 
-    await userService.register(userData);
+    const token = await userService.register(userData);
+
+    res.cookie('auth', token);
 
     res.redirect('/');
 });
