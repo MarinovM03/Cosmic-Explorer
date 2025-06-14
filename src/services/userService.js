@@ -1,4 +1,5 @@
 import bcrypt from 'bcrypt';
+import jsonwebtoken from 'jsonwebtoken';
 
 import User from '../models/User.js';
 
@@ -28,5 +29,12 @@ export default {
         if (!isValid) {
             throw new Error('Invalid username or password!');
         }
+
+        const payload = {
+            id: user.id,
+            username,
+        };
+
+        const token = jsonwebtoken.sign(payload, null, { expiresIn: '2h' });
     }
 }

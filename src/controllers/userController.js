@@ -22,7 +22,7 @@ userController.get('/login', (req, res) => {
 userController.post('/login', async (req, res) => {
     const loginData = req.body;
 
-    // await userService.login(loginData);
+    await userService.login(loginData);
 
     res.render('/');
 });
