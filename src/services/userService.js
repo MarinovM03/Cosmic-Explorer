@@ -6,6 +6,12 @@ export default {
             throw new Error('Password Missmatch!');
         }
 
+        const user = User.findOne({ email: userData.email });
+        
+        if (user) {
+            throw new Error('User already exists!');
+        }
+
         return User.create(userData);
     }
 }
