@@ -15,7 +15,7 @@ initDatabase();
 app.use(express.static('src/public'));
 
 // Use cookie-parser
-app.use(cookieParser);
+app.use(cookieParser());
 
 // Body parser middleware
 app.use(express.urlencoded());
