@@ -15,10 +15,13 @@
                 <li><a href="/">Home</a></li>
                 <li><a href="#">Catalog</a></li>
                 <li><a href="#">Search</a></li>
-                <li><a href="#">Create</a></li>
-                <li><a href="/users/login">Login</a></li>
-                <li><a href="/users/register">Register</a></li>
-                <li><a href="/users/logout">Logout</a></li>
+                {{#if isAuthenticated}}
+                    <li><a href="#">Create</a></li>
+                    <li><a href="/users/logout">Logout</a></li>
+                {{else}}
+                    <li><a href="/users/login">Login</a></li>
+                    <li><a href="/users/register">Register</a></li>
+                {{/if}}
             </ul>
         </nav>
     </header>
