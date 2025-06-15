@@ -5,7 +5,7 @@ import routes from './routes.js';
 import initDatabase from './config/dbConfig.js';
 import cookieParser from 'cookie-parser';
 import { auth } from './middlewares/authMiddleware.js';
-import helpers from './views/helpers.js';
+import viewHelpers from './views/viewHelpers.js';
 
 // Init express
 const app = express();
@@ -29,7 +29,7 @@ app.engine('hbs', handlebars.engine({
         allowProtoMethodsByDefault: true,
         allowProtoPropertiesByDefault: true,
     },
-    helpers: helpers,
+    helpers: viewHelpers,
 }));
 
 // Set handlebars as default engine
