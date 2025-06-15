@@ -10,7 +10,7 @@ export function tempData(req, res, next) {
     }
 
     res.locals = Object.assign(res.locals, req.session.data);
-    req.session.clear();
+    req.session.data = null;
 
     next();
 }
