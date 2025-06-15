@@ -17,7 +17,7 @@ export default {
 
         const newUser = await User.create(userData);
 
-        const token = generateAuthToken(newUser);
+        const token = await generateAuthToken(newUser);
 
         return token;
     },
@@ -34,7 +34,7 @@ export default {
             throw new Error('Invalid username or password!');
         }
 
-        const token = generateAuthToken(user);
+        const token = await generateAuthToken(user);
         
         return token;
     }

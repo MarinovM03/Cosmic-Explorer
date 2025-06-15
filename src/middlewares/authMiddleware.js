@@ -1,6 +1,5 @@
-import jsonwebtoken from 'jsonwebtoken';
-
 import { AUTH_COOKIE_NAME, JWT_SECRET } from "../config/index.js";
+import jsonwebtoken from "../lib/jsonwebtoken.js";
 
 export function auth(req, res, next) {
     const token = req.cookies[AUTH_COOKIE_NAME];
