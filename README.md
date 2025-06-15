@@ -60,12 +60,6 @@
 
 ---
 
-## 📄 License
-
-This project is for educational and demonstration purposes.
-
----
-
 ## 🙏 Acknowledgments
 
 - [Express](https://expressjs.com/)
