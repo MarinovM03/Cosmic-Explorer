@@ -8,6 +8,7 @@ import cookieParser from 'cookie-parser';
 import { auth } from './middlewares/authMiddleware.js';
 import viewHelpers from './views/viewHelpers.js';
 import { SESSION_SECRET } from './config/index.js';
+import { tempData } from './middlewares/tempDataMiddleware.js';
 
 // Init express
 const app = express();
@@ -50,6 +51,9 @@ app.set('views', 'src/views');
 
 // Use auth middleware
 app.use(auth);
+
+// Use temp data middleware
+app.use(tempData);
 
 // Add routes
 app.use(routes);
